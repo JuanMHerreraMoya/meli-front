@@ -1,0 +1,42 @@
+/* src/index.css */
+
+/* Importa las utilidades de Tailwind */
+@import "tailwindcss";
+
+/*
+  En v4.0, toda la personalización se hace aquí.
+  Puedes definir tus colores, fuentes, etc. usando @theme
+*/
+@theme {
+  --color-primary: #2563eb;
+  --color-secondary: #fcd34d;
+}
+
+/*
+  Si necesitas estilos personalizados que no son de Tailwind,
+  puedes definirlos aquí, usando las variables del tema si quieres.
+*/
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  height: 200px;
+  object-fit: contain;
+}
+
+.detail-image {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
